@@ -4,6 +4,7 @@ import React, {useState} from "react";
 import Card from "../UI/Card";
 import Button from "../UI/Button";
 import classes from './AddUser.module.css'
+import ErrorModal from "../UI/ErrorModal";
 
 
 
@@ -40,6 +41,8 @@ function addUserHandler(event){
     
 
     return (
+        <div>
+        <ErrorModal title="An error occured!" message="Something went wrong!"/>
         <Card className={classes.input}>
             <form  onSubmit={addUserHandler}>
                 <label htmlFor="username">Username</label>
@@ -50,6 +53,7 @@ function addUserHandler(event){
                 
             </form>
         </Card>
+        </div>
     );
 };
 
