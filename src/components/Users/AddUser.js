@@ -28,11 +28,12 @@ function addUserHandler(event){
     if(enteredUserName.trim().length === 0 || enteredUserAge.trim().length === 0 ) {
         return; 
     }
-if (+enteredUserAge < 1) {
+    if (+enteredUserAge < 1) {
     return;
-}
-    console.log(enteredUserAge,enteredUserName)
+    }
+    
 
+    props.onAddUser(enteredUserName, enteredUserAge);
     setEntereduserName('')
     setEnteredUserAge('')
     }
