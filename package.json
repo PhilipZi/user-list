@@ -32,7 +32,10 @@
     ]
   },
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^8.35.0",
+    "eslint-plugin-react": "^7.32.2"
+  },
   "author": "",
   "license": "ISC",
   "description": ""
