@@ -7,6 +7,8 @@ import classes from "./ErrorModal.module.css"
 
 function ErrorModal(props){
     return (
+        <div>
+           <div className={classes.backdrop}/>     
         <Card className={classes.modal}>
             <header className={classes.header}>
                 <h2>{PaymentResponse.title}</h2>
@@ -18,6 +20,7 @@ function ErrorModal(props){
                 <Button>Okay</Button>
             </footer>
         </Card>
+        </div>
     )
 }
 export default ErrorModal;

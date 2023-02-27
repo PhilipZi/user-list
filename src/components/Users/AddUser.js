@@ -35,6 +35,8 @@ function addUserHandler(event){
     
 
     props.onAddUser(enteredUserName, enteredUserAge);
+
+
     setEntereduserName('')
     setEnteredUserAge('')
     }
