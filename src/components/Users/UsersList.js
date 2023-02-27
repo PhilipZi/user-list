@@ -8,16 +8,17 @@ import Card from "../UI/Card";
 
 function UsersList(props){
 
-return 
+return (
     <Card className={classes.users}>
-    <ul>
-        {props.users.map((user) => (
+        <ul>
+            {props.users.map((user) => (
             <li>
              {user.name} ({user.age} years old)
             </li>
         ))}
-    </ul>
+        </ul>
     </Card>
+    )
 }
 
 export default UsersList
