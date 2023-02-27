@@ -50,10 +50,13 @@ function addUserHandler(event){
     setEnteredUserAge('')
     }
     
+    function errorHandler(){
+        setError(null)
+    }
 
     return (
         <div>
-        {error && <ErrorModal title={error.title} message={error.message}/>}
+        {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler}/>}
         <Card className={classes.input}>
             <form  onSubmit={addUserHandler}>
                 <label htmlFor="username">Username</label>
