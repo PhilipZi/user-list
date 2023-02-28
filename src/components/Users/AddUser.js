@@ -27,7 +27,6 @@ function ageChangeHandler(event) {
 
 function addUserHandler(event){
     event.preventDefault()
-    console.log(nameInputRef)
 
     if(enteredUserName.trim().length === 0 || enteredUserAge.trim().length === 0 ) {
         setError({
@@ -62,21 +61,9 @@ function addUserHandler(event){
         <Card className={classes.input}>
             <form  onSubmit={addUserHandler}>
                 <label htmlFor="username">Username</label>
-                <input 
-                id="username" 
-                type="text" 
-                value={enteredUserName} 
-                onChange={nameChangeHandler}
-                ref={nameInputRef}
-                />
+                <input id="username" type="text" value={enteredUserName} onChange={nameChangeHandler}/>
                 <label htmlFor="age">Age (Years)</label>
-                <input 
-                id="age"
-                type="number" 
-                value={enteredUserAge} 
-                onChange={ageChangeHandler}
-                ref={ageInputRef}
-                />
+                <input id="age"type="number" value={enteredUserAge} onChange={ageChangeHandler}/>
                 <Button type="submit">Add User</Button>
                 
             </form>
